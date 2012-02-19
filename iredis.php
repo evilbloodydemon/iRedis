@@ -176,6 +176,7 @@ class iRedis {
                 for ($i = 0; $i < $count; $i++)
                 {
                     $bulk_head = trim(fgets($this->connection, 512));
+                    $size = substr($bulk_head, 1);
 
                     if ($size == '-1')
                     {
